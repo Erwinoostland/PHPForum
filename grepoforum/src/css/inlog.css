@@ -1,0 +1,89 @@
+body {
+    background: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.loginform {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    padding: 10px 25px;
+    background: lightgray;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-bottom: 5px solid gray;
+    border-radius: 4px;
+    opacity: 0.9;
+}
+
+.loginface {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 100px;
+    margin: 0 auto;
+    margin-top:75px;
+}
+.loginface>img{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 20%;
+}
+.form{
+    width: 100%;
+    position: relative;
+    margin: 25px auto;
+}
+.input{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin: 15px auto;
+}
+input[type="text"], input[type="password"]{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    outline: none;
+    border:2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: sans-serif,Arial;
+    color: gray;
+}
+
+input[type="text"]:focus, input[type="password"]:focus{
+    border:2px solid black;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    background: black;
+    font-family: sans-serif,Arial;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+}
+.error-msg{
+    font-size: 16px;
+    font-family: sans-serif,Arial;
+    color: red;
+    margin-top:50px;
+    display: none;
+}
+.error{
+    position: relative;
+    animation : shake 0.2s;
+}
+
+.errormessage {
+    text-align: center;
+    color: red;
+    font-family: "Century Gothic", Georgia, serif
+}

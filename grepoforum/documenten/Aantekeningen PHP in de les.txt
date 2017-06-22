@@ -1,0 +1,142 @@
+|
+Wanneer een bestand is aangepast kan je het zo naar github sturen
+git add .
+git commit -m "-Waar gaar de commit over?-"
+git push
+|
+wireframe kan gemaakt worden met justinmind ( staat op mooodle)
+|
+Er word gestart met een landingspage( een blokje) Vanaf hier kan je naar de login pagina, registratie pagina, profiel pagina en nieuwe thema/topic.
+Via een landingspage kan je in verschillende thema's komen, 
+In een thema kan je op een topic klikken. In een topic kan je een nieuwe reactie plaatsen.
+|
+THEMA
+1#LANDINGSPAGE
+  Laat alle thema's zien.
+  En per thema laten zien hieveel topics het thema heeft.
+- je kan op een thema klikken waardoor ik op de topic pagina kom
+- wie -> admin wanneer geplaatst
+|
+2# THEMA
+  De pagina van 1 thema we laten hier alle bijbehorende topics zien.
+- in het overzicht van de topics laten we ook zien hoeveel reacties er op de topics zijn.
+- per topic laten zien wanneer en door wie geplaatst is.
+|
+3# TOPIC 
+  pagina 1 topic toont alle reacties op de topic
+- Per reactie laat ik zien wanneer deze geplaatst is en door welke user.
+|
+* alleen toegangkelijk als er ingelogd is.
+ Nieuw topic
+ Nieuw thema
+ Profiel (Alleen de gegevens tonen van de ingelogde user.)(gegevens van anders users mogen niet toegankelijk zijn)
+ Nieuw reactie
+|
+* 1
+ Alleen admin mag nieuwe thema aanmaken
+|
+* 2
+Registreren hoeft niet toegankelijk te zijn als je ingelogd bent.
+|
+O 3
+Registreren en login alleen in het menu tonen als er nog niet ingelogd is, Is er wel ingelogd.
+|
+O 4
+Profiel en logout tonen in het menu wanneer er ingelogd is.
+|
+|
+|
+|
+WIREFRAME VOORBEELD
+1 Navigatie balk
+- staat vast bovenaan de pagina
+|
+2 Logo + naam
+|
+3 Welkom
+|
+4 koptekst -> themas
+|
+5 panel per thema
+|
+6 titel van thema's
+|
+7 Korte beschrijving van thema
+|
+8 Gebruikersnaam van diegene die de thema aangemaakt heeft + de datum en de tijd van wanneer het aangemaakt is
+|
+9Koptektst -> topic
+
+10 Getal welke aangeeft
+
+
+
+
+
+TECHNISCH ONTWERP
+1. Database ontwerp
+2. Database diagram(ERD)
+3. Naamgevings conventies codingconventies
+
+
+CONVENTIES
+A Bestanden en mappen
+1. deze namen moeten beschrijvend zijn
+2. deze namen moeten in kleine letters zijn
+3. woorden in de namen ga je van elkaar scheiden met een underscore/ bijv print_user.php
+4. in de namen mag ik geen spaties, getallen, rare tekens en zo gebruiken. Dus gebruik alleen letters en underscores
+
+B code
+1. Variabelen , functies, classes en dergelijke worden in kleine letters geschreven en worden eventueel gescheiden door een underscore
+2. Alle andere tekens zoals getallen zijn niet toegestaan.
+3. Variabele namen zijn beschrijvend ze vertellen iets over de inhoud geen afkortingen gebruiken
+4.namen van functies zijn beschrijvend en beginnen met een werkwoord zoals bv print_user_php
+
+C database
+1. alle namen tabbellen en kollommen in kleine letters
+2. Geen spaties cijfers etc
+3. Woorden scheiden door een underscore
+4. tabelnaam zijn beschrijvend en in meervoud bv users
+5. de primaire sleutel van elke tabel heet altijd id in kleine letters
+6. Vreemde sleutels bestaan altijd uit 2 delen. 
+1e deel Meervoud de naam v/d tabel waarnaar we verwijzen
+
+2e deel de naam van den primaire sleutel van de tabel voornaam verwezen word.
+
+beide delen scheiden we met een underscore
+
+
+Forum 
+pijltje 
+thema
+pijltje pijltje
+topic   topic
+pijltje'
+reacties reactie
+
+users
+id username password(sha1) email
+created_at, updated_at, role( 0= user, 1= admin)
+
+USERS
+id = int(11) PrimaryKey A_I unsigned, not null
+username = varchar (30), not null, index
+password = varchar (255), not null, (sha1)
+email = varchar (255), not null, 
+created_ad = timestamp default (current_TIMESTAMP) null
+updatet_ad = timestamp 			           null
+role = tiny int default(0) not null
+
+THEMAS
+id, subject, description, user_id, created_at, updatet_at
+
+description = text
+user_id = int(11) unsigned
+
+TOPICS
+id, subject, description, created_at, updatet_at, thema_id, user_id
+
+REACTIES
+id, content, created_at, updatet_at, user_id, topic_id
+
+

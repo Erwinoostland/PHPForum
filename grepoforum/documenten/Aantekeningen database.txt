@@ -1,0 +1,162 @@
+php my admin
+
+Database naam=forum_grepo zonder hoofdletters
+
+eerste tabel maken is Users, aantal kolommen: 7, klik op starten
+
+id, INT, UNSIGNED, AI(JA)
+username,  VARCHAR lengte=(30), INDEX
+password, varchar lengte=(255) opmerking= sha1 coderen
+email, varchar lengte=(255)
+created_at, TIMESTAMP, standaardwaarde=CURRENT_TIMESTAMP
+updated_at, TIMESTAMP
+role, TINYINT, staandaarwaarde = 0
+
+Hierna tabel opslaan
+
+
+Maak een admin d.m.v invoegen
+
+username=admin
+password(SHA1)=welkom
+email=admin@admin.com
+role=1
+
+Nog een nieuwe user
+
+username=jasper
+password(SHA1)=welkom
+email=jasper@jasper.com
+role=0
+
+
+
+
+ga terug naar databse, Maak nieuwe tabel aan. 
+
+themes, 6 kolommen en klik op start
+
+id, INT, UNSIGNED, AI(JA)
+subject, varchar lengte=255
+description, text
+user_id, INT, UNSIGNED
+created_at, TIMESTAMP, standaarwaarde= CURRENT_TIMESTAMP
+updated_at, TIMESTAMP
+
+sla op, en klik op invoegen ga naar subject
+
+subject= PHP
+description= hier kun je alle vragen kwijt over PHP
+user_id=1
+
+subject=HTML
+description=hier kun je alle vragen over html
+user_id=1
+
+Klik op starten en nu heb je 2 themes toegevoegt.
+
+
+
+
+
+Maak nieuwe tabel genaamd topic met 7 kolommen
+
+id, INT, UNSIGNED, AI(JA)
+subject, varchar lengte=255
+description, text
+theme_id, INT, UNSIGNED
+user_id, INT, UNSIGNED
+created_at, TIMESTAMP, standaarwaarde= CURRENT_TIMESTAMP
+updated_at, TIMESTAMP
+
+Ga weer naar invoegen, user 1 is admin, user 2 is jasper. thema 1 is PHP, thema 2 is html
+
+subject=PDO
+description= vragen over database actievieteiten met de hulp van php
+theme_id=1
+user_id=1
+
+subject= array's
+description= vragen over arrays in php
+theme_id=1
+user_id=2
+
+toevoegen als nieuwe rij en dan een nieuwe rij toevoegen daarna pas starten
+
+maak nieuwe subject
+
+subject=classes en OOP
+description=OOP in php hoe doen we dat?
+thema_id=1
+user_id=2
+
+subject=head section
+description=vragen over de metatags 
+theme_id=1
+user_id=2
+ start weer en volgende
+
+subject= scriptag=
+destiprion=
+thema_id 2
+user_id 1
+
+subject=geen divs
+description=waarom je geen divs moet gebruiken voor een hogere ranking bij google
+theme_id=2
+user_id=2
+
+starten maar wel op terug zetten
+
+Maak nieuwe tabel, replies met 6 kolommen
+
+id, INT, UNSIGNED, AI(JA)
+content, LONGTEXT, 
+user_id, INT, UNSIGNED
+topic_id, INT, UNSIGNED
+created_at, TIMESTAMP, standaarwaarde= CURRENT_TIMESTAMP
+updated_at, TIMESTAMP
+
+ga weer naar invoegen
+
+content=lorum ipsum
+user_id=1
+topic_id=1
+
+content=lorum ipsum
+user_id=2
+topic_id=1
+
+Weer nieuwe rij toevoegen selecteren en dna pas starten
+
+content=lorum ipsum
+user_id=2
+topic=2
+
+content=lorum=
+user_id=2
+topic=1
+
+content=lorum ipsum
+user_id=1
+topic=2
+
+content=lorum ipsum
+user_id=2
+topic=3
+
+content=lorum ipsum
+user_id=2
+topic=5
+
+content=lorum ipsum
+user_id=1
+topic=6
+
+content=lorum ipsum
+user_id=2
+topic=6
+
+weer terug en dan pas starten
+
+

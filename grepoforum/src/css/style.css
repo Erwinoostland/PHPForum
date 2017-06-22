@@ -1,0 +1,11 @@
+body {
+    padding: 0;
+    margin:0;
+    background-color: lightgray;
+    font-family: "Century Gothic", Georgia, serif
+}
+
+.forumheader {
+    margin-left: 15%;
+}
+

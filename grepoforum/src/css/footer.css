@@ -1,0 +1,16 @@
+footer {
+    background-color: #333;
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-family: "Century Gothic", Georgia, serif
+}
+
+footer a {
+    color: white;
+}
